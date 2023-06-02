@@ -8,7 +8,7 @@ CORS(app)
 
 # open api key- put your own api key
 # always remember to remove your ai key before you push the code
-openai.api_key = ''
+openai.api_key = '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'
 
 faq_string = ""
 for i, (question, answer) in enumerate(faq.items()):
