@@ -2,13 +2,14 @@ import openai
 from FAQ import faq
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
 CORS(app)
 
 # open api key- put your own api key
 # always remember to remove your ai key before you push the code
-openai.api_key = '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'
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 faq_string = ""
 for i, (question, answer) in enumerate(faq.items()):
